@@ -1,0 +1,25 @@
+{
+  "num_of_tx": 10,
+  "num_of_mtx": 1,
+  "lower_cash": 100,
+  "higher_cash": 5000,
+  "lower_token": 1,
+  "higher_token": 100,
+  "ring_size" : 7,
+  "sleep_tx" : 3,
+  "sleep_mtx" : 3,
+  "period" : 10,
+  "migration_period_coeff" : 3,
+  "advanced_wallet_path_cli": "./safex-advanced-wallet-cli",
+  "advanced_wallet_path_file": "./advanced_wallet.bin",
+  "simple_wallet_path_cli": "./safex-wallet-cli",
+  "wallet_electrum_seeds": [
+    "family against skydive lakes ramped feline nomad cage pegs feline skydive nabbing union album darted cause wagtail arsenic angled rage ramped oxidant adhesive afield dwindling",
+    "adhesive erected cobra stick zesty asylum stick ghetto shyness weavers niche somewhere swung phrases chlorine oxidant nurse pavements tossed lumber adhesive hookup intended judge shyness",
+    "fizzle skydive arsenic click wives bacon apology feline long inkling avidly gimmick album frying nephew union umpire sack tasked idiom budget lazy getting heels afield"
+  ],
+  "wallets_daemon_host": "localhost",
+  "wallets_daemon_port": 29393,
+  "wallet_files_path": "./produced_data/",
+  "wallet_log_path": "./logs/"
+}
