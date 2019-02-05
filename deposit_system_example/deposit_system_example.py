@@ -10,13 +10,13 @@ import time
 DB will have next tables for now.
 pid_txid (id integer, pid text, txid text, block_height)
 state (id integer, key text, value text)
-user (id integer, username text, pid text, cash integer, token integer)
+user (id integer, username text, pid text, cash integer, token integer, integrated_address text)
 '''
 
 # Class for handling saving data. Its sqlite3 database.
 class DB:
     def __init__(self):
-        self.__db_path = 'main2.db'
+        self.__db_path = 'main.db'
         exists = os.path.exists(self.__db_path)
         self.__db_conn = sqlite3.connect(self.__db_path)
         self.__cursor = self.__db_conn.cursor()
@@ -144,6 +144,8 @@ class System:
         pid = binascii.hexlify((num_of_users.to_bytes(32, 'little'))).decode('utf-8')
         self.db.createUser(username=username, pid=pid)
 
+    # Creating user with integrated address and randomly generated paymentID
+    # Optionally can be used to generate integrated address based on given payment ID
     def createUserWithIntegratedAddr(self, username=""):
         intAddress, PID = self.getIntegratedAddress()
         self.db.createUser(username=username, pid=PID.ljust(64, '0'), integrated_address=intAddress)
