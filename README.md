@@ -6,6 +6,8 @@ There are currently three utility scripts
 - find_txid_with_kimage
 - stress_test
 
+All scripts are tested and run with python3.6 on Ubuntu-18.04
+
 ## deposit_system_example
 Example script how to implement deposit payment system. This is used at exchanges.
 
